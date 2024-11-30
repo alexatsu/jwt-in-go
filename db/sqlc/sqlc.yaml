@@ -1,0 +1,12 @@
+version: "2"
+cloud:
+  project: "01JA8VAA50A5VAQFZ3DXXM9NYH"
+sql:
+  - engine: "postgresql"
+    queries: "./raw/session/query.sql"
+    schema: "./raw/session/schema.sql"
+    gen:
+      go:
+        package: "session"
+        out: "generated/session"
+        sql_package: "pgx/v5"
